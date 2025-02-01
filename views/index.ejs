@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <div class="form-container">
+        <% if(locals.randomAdj && locals.randomNoun) {%>
+            <h1 id="random">
+                <%= randomAdj %>
+                <%= randomNoun %>
+            </h1>
+            <% }else{ %>
+                <h1 id="elseh1">Click the Button Below to generate the Name !</h1>
+                <% } %>
+<form action="/submit" method="post">
+    <input type="submit" value="Generate Random TeamName" >
+</form>
+</div>
+    <%- include("partials/footer.ejs") %>
